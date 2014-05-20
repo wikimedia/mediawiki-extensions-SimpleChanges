@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ike Hecht\r"
+		]
+	},
+	"simplechanges": "SimpleChanges",
+	"simplechanges-desc": "Special page that displays a barebones Recent Changes list",
+	"simplechanges-summary": "Simple display of recent changes.",
+	"simplechanges-contentnamespace": "Content namespace:"
+}

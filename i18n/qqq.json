@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ike Hecht\r"
+		]
+	},
+	"simplechanges": "The name of the extension's entry in Special:SpecialPages",
+	"simplechanges-desc": "{{desc}}",
+	"simplechanges-summary": "Summary of [[Special:SimpleChanges]].",
+	"simplechanges-contentnamespace": "Displayed in the namespace form instead of \"namespace\" when extension set to only display content namespaces"
+}
