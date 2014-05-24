@@ -5,10 +5,26 @@
  * @file
  * @ingroup Extensions
  */
+// @codingStandardsIgnoreFile
 
 $specialPageAliases = array();
 
 /** English (English) */
 $specialPageAliases['en'] = array(
 	'SimpleChanges' => array( 'Simplechanges', 'Simple Changes' ),
+);
+
+/** German (Deutsch) */
+$specialPageAliases['de'] = array(
+	'SimpleChanges' => array( 'Vereinfachte_Änderungen' ),
+);
+
+/** Simplified Chinese (中文（简体）‎) */
+$specialPageAliases['zh-hans'] = array(
+	'SimpleChanges' => array( '简单更改' ),
+);
+
+/** Traditional Chinese (中文（繁體）‎) */
+$specialPageAliases['zh-hant'] = array(
+	'SimpleChanges' => array( '簡易更改' ),
 );
