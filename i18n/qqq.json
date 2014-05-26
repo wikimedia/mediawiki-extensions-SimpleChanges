@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ike Hecht\r"
+			"Ike Hecht\r",
+			"Shirayuki"
 		]
 	},
-	"simplechanges": "The name of the extension's entry in Special:SpecialPages",
-	"simplechanges-desc": "{{desc}}",
+	"simplechanges": "{{doc-special|SimpleChanges}}",
+	"simplechanges-desc": "{{desc|name=Simple Changes|url=http://www.mediawiki.org/wiki/Extension:SimpleChanges}}",
 	"simplechanges-summary": "Summary of [[Special:SimpleChanges]].",
-	"simplechanges-contentnamespace": "Displayed in the namespace form instead of \"namespace\" when extension set to only display content namespaces"
+	"simplechanges-contentnamespace": "Displayed in the namespace form instead of {{msg-mw|Namespace}} when extension set to only display content namespaces (<code>$scOnlyContentNamespaces</code>)."
 }
