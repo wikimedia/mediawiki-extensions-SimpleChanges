@@ -101,11 +101,7 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 			$classes = array();
 			$changeLine = false;
 
-			// Ignore everything other than actual changes to pages
-			// Moved pages (very very old, not supported anymore)
-			if( $rc->mAttribs['rc_type'] == RC_MOVE || $rc->mAttribs['rc_type'] == RC_MOVE_OVER_REDIRECT ) {
-			// Log entries
-			} elseif( $rc->mAttribs['rc_log_type'] ) {
+			if( $rc->mAttribs['rc_log_type'] ) {
 			// Log entries (old format) or log targets, and special pages
 			} elseif( $rc->mAttribs['rc_namespace'] == NS_SPECIAL ) {
 			// Regular entries
