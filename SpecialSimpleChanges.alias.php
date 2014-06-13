@@ -24,6 +24,11 @@ $specialPageAliases['ko'] = array(
 	'SimpleChanges' => array( '간단바뀜' ),
 );
 
+/** Dutch (Nederlands) */
+$specialPageAliases['nl'] = array(
+	'SimpleChanges' => array( 'SimpeleWijzigingen' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'SimpleChanges' => array( '简单更改' ),
