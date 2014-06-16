@@ -19,6 +19,11 @@ $specialPageAliases['de'] = array(
 	'SimpleChanges' => array( 'Vereinfachte_Änderungen' ),
 );
 
+/** Upper Sorbian (hornjoserbsce) */
+$specialPageAliases['hsb'] = array(
+	'SimpleChanges' => array( 'Jednore_změny' ),
+);
+
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
 	'SimpleChanges' => array( '간단바뀜' ),
