@@ -29,6 +29,11 @@ $specialPageAliases['ko'] = array(
 	'SimpleChanges' => array( '간단바뀜' ),
 );
 
+/** Macedonian (македонски) */
+$specialPageAliases['mk'] = array(
+	'SimpleChanges' => array( 'ПростиПромени' ),
+);
+
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
 	'SimpleChanges' => array( 'SimpeleWijzigingen' ),
