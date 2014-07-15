@@ -14,6 +14,16 @@ $specialPageAliases['en'] = array(
 	'SimpleChanges' => array( 'Simplechanges', 'Simple Changes' ),
 );
 
+/** Arabic (العربية) */
+$specialPageAliases['ar'] = array(
+	'SimpleChanges' => array( 'تغييرات_بسيطة' ),
+);
+
+/** Egyptian Spoken Arabic (مصرى) */
+$specialPageAliases['arz'] = array(
+	'SimpleChanges' => array( 'تغييرات_بسيطه' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'SimpleChanges' => array( 'Vereinfachte_Änderungen' ),
