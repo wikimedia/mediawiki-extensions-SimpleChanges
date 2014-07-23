@@ -39,6 +39,11 @@ $specialPageAliases['ko'] = array(
 	'SimpleChanges' => array( '간단바뀜' ),
 );
 
+/** Luxembourgish (Lëtzebuergesch) */
+$specialPageAliases['lb'] = array(
+	'SimpleChanges' => array( 'Einfach_Ännerungen' ),
+);
+
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'SimpleChanges' => array( 'ПростиПромени' ),
