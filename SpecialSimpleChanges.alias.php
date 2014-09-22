@@ -54,6 +54,11 @@ $specialPageAliases['nl'] = array(
 	'SimpleChanges' => array( 'SimpeleWijzigingen' ),
 );
 
+/** Vietnamese (Tiếng Việt) */
+$specialPageAliases['vi'] = array(
+	'SimpleChanges' => array( 'Thay_đổi_đơn_giản' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'SimpleChanges' => array( '简单更改' ),
