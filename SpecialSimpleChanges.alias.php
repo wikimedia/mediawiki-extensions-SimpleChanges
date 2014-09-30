@@ -29,6 +29,11 @@ $specialPageAliases['de'] = array(
 	'SimpleChanges' => array( 'Vereinfachte_Änderungen' ),
 );
 
+/** Persian (فارسی) */
+$specialPageAliases['fa'] = array(
+	'SimpleChanges' => array( 'تغییرات_ساده' ),
+);
+
 /** Upper Sorbian (hornjoserbsce) */
 $specialPageAliases['hsb'] = array(
 	'SimpleChanges' => array( 'Jednore_změny' ),
