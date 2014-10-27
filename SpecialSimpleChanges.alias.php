@@ -1,5 +1,0 @@
-
-/
-// @codingStandardsIgnoreFile
-
-$specialPageAliases = array();
