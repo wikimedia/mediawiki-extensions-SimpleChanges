@@ -24,6 +24,11 @@ $specialPageAliases['arz'] = array(
 	'SimpleChanges' => array( 'تغييرات_بسيطه' ),
 );
 
+/** Western Balochi (بلوچی رخشانی) */
+$specialPageAliases['bgn'] = array(
+	'SimpleChanges' => array( 'ساده_گین_تغیران' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'SimpleChanges' => array( 'Vereinfachte_Änderungen' ),
