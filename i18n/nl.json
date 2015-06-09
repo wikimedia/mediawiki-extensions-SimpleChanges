@@ -3,9 +3,5 @@
 		"authors": [
 			"Rangekill"
 		]
-	},
-	"simplechanges": "Eenvoudige wijzigingen",
-	"simplechanges-desc": "Speciale pagina geeft een barebones recente wijzigingen lijst",
-	"simplechanges-summary": "Eenvoudige weergave van recente wijzigingen.",
-	"simplechanges-contentnamespace": "Inhoudnaamruimte"
+	}
 }
