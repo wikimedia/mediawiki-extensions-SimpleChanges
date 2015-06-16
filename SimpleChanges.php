@@ -20,7 +20,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
 	'name' => 'SimpleChanges',
-	'version' => '0.2',
+	'version' => '1.0',
 	'author' => 'Ike Hecht for [http://www.wikiworks.com/ WikiWorks]',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SimpleChanges',
 	'descriptionmsg' => 'simplechanges-desc',
@@ -34,3 +34,6 @@ $wgExtensionMessagesFiles['SimpleChangesAlias'] = __DIR__ . '/SimpleChanges.alia
 
 # Restrict list of changes to $wgContentNamespaces?
 $wgSimpleChangesOnlyContentNamespaces = false;
+
+# Show only the changes which are each page's most recent revisions. Avoids duplicate page titles.
+$wgSimpleChangesOnlyLatest = true;

@@ -6,13 +6,23 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 	}
 
 	/**
-	 * Return an array of conditions depending of options set in $opts
+	 * Add our own modifications to the RC query
 	 *
-	 * @param $opts FormOptions
-	 * @return array
+	 * @global array $wgContentNamespaces
+	 * @global bool $wgSimpleChangesOnlyContentNamespaces
+	 * @global bool $wgSimpleChangesOnlyLatest
+	 * @param array $tables
+	 * @param array $fields
+	 * @param array $conds
+	 * @param array $query_options
+	 * @param array $join_conds
+	 * @param FormOptions $opts
+	 * @return bool True if no handler aborted the hook
 	 */
-	public function buildMainQueryConds( FormOptions $opts ) {
-		global $wgContentNamespaces, $wgSimpleChangesOnlyContentNamespaces;
+	protected function runMainQueryHook( &$tables, &$fields, &$conds, &$query_options, &$join_conds,
+		$opts
+	) {
+		global $wgContentNamespaces, $wgSimpleChangesOnlyContentNamespaces, $wgSimpleChangesOnlyLatest;
 
 		$conds = parent::buildMainQueryConds( $opts );
 
@@ -30,8 +40,17 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 			$condition .= ')';
 			$conds[] = $condition;
 		}
+		if ( $wgSimpleChangesOnlyLatest ) {
+			$conds[] = 'rc_this_oldid=page_latest';
 
-		return $conds;
+			// Sometimes this is added by the parent, sometimes not.
+			if ( !in_array( 'page', $tables ) ) {
+				$tables[] = 'page';
+				$fields[] = 'page_latest';
+				$join_conds['page'] = array( 'LEFT JOIN', 'rc_cur_id=page_id' );
+			}
+		}
+		return parent::runMainQueryHook( $tables, $fields, $conds, $query_options, $join_conds, $opts );
 	}
 
 	/**
