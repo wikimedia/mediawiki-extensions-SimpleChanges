@@ -92,6 +92,7 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 	 * This function is a modified combination of SpecialRecentchanges::outputChangesList() &
 	 * ChangesList::recentChangesLine()
 	 *
+	 * @global bool $wgSimpleChangesShowUser
 	 * @param $rows Array of database rows
 	 * @param $opts FormOptions
 	 */
@@ -119,7 +120,16 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 				// Regular entries
 			} else {
 				$list->insertArticleLink( $changeLine, $rc, false, false );
-				$changeLine = "<li>" . $changeLine . "</li>\n";
+				$changeLine = Html::openElement( 'li' ) . $changeLine;
+
+				global $wgSimpleChangesShowUser;
+				if ( $wgSimpleChangesShowUser ) {
+					# from ChangesList::insertUserRelatedLinks()
+					$user = ' (' .
+						Linker::userLink( $rc->mAttribs['rc_user'], $rc->mAttribs['rc_user_text'] ) . ')';
+					$changeLine .= Html::rawElement( 'span', array( 'class' => 'simplechanges-user' ), $user );
+				}
+				$changeLine .= Html::closeElement( 'li' ) . "\n";
 			}
 
 			if ( $changeLine !== false ) {
