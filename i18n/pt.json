@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Hamilton Abreu"
 		]
 	},
 	"simplechanges-desc": "Página especial que apresenta uma lista básica de Mudanças recentes",
 	"simplechanges-summary": "Visualização simples das mudanças recentes.",
-	"simplechanges-contentnamespace": "Conteúdo do domínio:"
+	"simplechanges-contentnamespace": "Espaço nominal de conteúdos:"
 }
