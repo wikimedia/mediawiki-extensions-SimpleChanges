@@ -29,7 +29,7 @@ $wgExtensionCredits['specialpage'][] = array(
 $wgAutoloadClasses['SpecialSimpleChanges'] = __DIR__ . '/SpecialSimpleChanges.php';
 $wgSpecialPages['SimpleChanges'] = 'SpecialSimpleChanges';
 $wgExtensionMessagesFiles['SimpleChanges'] = __DIR__ . '/SimpleChanges.i18n.php';
-$wgMessageDirs['SimpleChanges'] = __DIR__ . '/i18n';
+$wgMessagesDirs['SimpleChanges'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SimpleChangesAlias'] = __DIR__ . '/SimpleChanges.alias.php';
 
 # Restrict list of changes to $wgContentNamespaces?
