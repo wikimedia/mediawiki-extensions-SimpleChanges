@@ -5,7 +5,8 @@
 			"Hamilton Abreu"
 		]
 	},
-	"simplechanges-desc": "Página especial que apresenta uma lista básica de Mudanças recentes",
-	"simplechanges-summary": "Visualização simples das mudanças recentes.",
-	"simplechanges-contentnamespace": "Espaço nominal de conteúdos:"
+	"simplechanges": "Mudanças simples",
+	"simplechanges-desc": "Página especial que apresenta uma lista básica de mudanças recentes",
+	"simplechanges-summary": "Apresentação simples das mudanças recentes.",
+	"simplechanges-contentnamespace": "Espaço nominal de conteúdo:"
 }
