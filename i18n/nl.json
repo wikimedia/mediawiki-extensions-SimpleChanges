@@ -1,7 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rangekill"
+			"Rangekill",
+			"Mainframe98"
 		]
-	}
+	},
+	"simplechanges": "Eenvoudige wijzigingen",
+	"simplechanges-summary": "Eenvoudige weergave van recente wijzigingen.",
+	"simplechanges-contentnamespace": "Inhoudnaamruimte:"
 }
