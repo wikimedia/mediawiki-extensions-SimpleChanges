@@ -14,12 +14,11 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 	 *
 	 * @inheritdoc
 	 */
-	protected function buildQuery( &$tables, &$fields, &$conds,
-		&$query_options, &$join_conds, FormOptions $opts ) {
+	protected function runMainQueryHook( &$tables, &$fields, &$conds, &$query_options, &$join_conds,
+		$opts
+	) {
 
 		global $wgContentNamespaces, $wgSimpleChangesOnlyContentNamespaces, $wgSimpleChangesOnlyLatest;
-
-		parent::buildQuery( $tables, $fields, $conds, $query_options, $join_conds, $opts );
 
 		# don't count log entries toward limit of number of changes displayed
 		$conds[] = 'rc_type != ' . RC_LOG;
@@ -45,6 +44,8 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 				$join_conds['page'] = array( 'LEFT JOIN', 'rc_cur_id=page_id' );
 			}
 		}
+
+		return parent::runMainQueryHook( $tables, $fields, $conds, $query_options, $join_conds, $opts );
 	}
 
 	/**
