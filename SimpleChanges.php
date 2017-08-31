@@ -3,7 +3,7 @@
  * SimpleChanges - Special page that displays a barebones Recent Changes list
  *
  * To activate this extension, add the following into your LocalSettings.php file:
- * require_once "$IP/extensions/SimpleChanges/SimpleChanges.php";
+ * wfLoadExtension( 'SimpleChanges' );
  *
  * @ingroup Extensions
  * @author Ike Hecht
@@ -11,32 +11,13 @@
  * @link https://www.mediawiki.org/wiki/Extension:SimpleChanges Documentation
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
-if ( !defined( 'MEDIAWIKI' ) ) {
-	echo( "This is an extension to the MediaWiki package and cannot be run standalone.\n" );
-	die( -1 );
+if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'SimpleChanges' );
+	wfWarn(
+		'Deprecated PHP entry point used for SimpleChanges extension. ' .
+		'Please use wfLoadExtension instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	);
+} else {
+	die( 'This version of the SimpleChanges extension requires MediaWiki 1.29+' );
 }
-
-// Extension credits that will show up on Special:Version
-$wgExtensionCredits['specialpage'][] = array(
-	'path' => __FILE__,
-	'name' => 'SimpleChanges',
-	'version' => '1.1',
-	'author' => 'Ike Hecht for [http://www.wikiworks.com/ WikiWorks]',
-	'url' => 'https://www.mediawiki.org/wiki/Extension:SimpleChanges',
-	'descriptionmsg' => 'simplechanges-desc',
-);
-
-$wgAutoloadClasses['SpecialSimpleChanges'] = __DIR__ . '/SpecialSimpleChanges.php';
-$wgSpecialPages['SimpleChanges'] = 'SpecialSimpleChanges';
-$wgExtensionMessagesFiles['SimpleChanges'] = __DIR__ . '/SimpleChanges.i18n.php';
-$wgMessagesDirs['SimpleChanges'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['SimpleChangesAlias'] = __DIR__ . '/SimpleChanges.alias.php';
-
-# Restrict list of changes to $wgContentNamespaces?
-$wgSimpleChangesOnlyContentNamespaces = false;
-
-# Show only the changes which are each page's most recent revisions. Avoids duplicate page titles.
-$wgSimpleChangesOnlyLatest = true;
-
-# Show the user who made the change
-$wgSimpleChangesShowUser = false;
