@@ -7,7 +7,7 @@
 	"type": "specialpage",
 	"url": "https://www.mediawiki.org/wiki/Extension:SimpleChanges",
 	"descriptionmsg": "simplechanges-desc",
-	"license-name": "GPL-2.0+",
+	"license-name": "GPL-2.0-or-later",
 	"requires": {
 		"MediaWiki": ">= 1.29.0"
 	},
