@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Kly",
-			"Laundry Machine"
+			"Laundry Machine",
+			"Liuxinyu970226"
 		]
 	},
 	"simplechanges": "簡易變更",
 	"simplechanges-desc": "顯示準系統近期變更的特殊頁面",
 	"simplechanges-summary": "最近變更的簡易顯示。",
-	"simplechanges-contentnamespace": "內容名稱空間："
+	"simplechanges-contentnamespace": "內容命名空間："
 }
