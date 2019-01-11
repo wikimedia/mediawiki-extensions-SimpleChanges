@@ -109,9 +109,9 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 
 			$changeLine = false;
 
-			if ( $rc->mAttribs['rc_log_type'] ) {
+			if ( $rc->getAttribute( 'rc_log_type' ) ) {
 				// Log entries (old format) or log targets, and special pages
-			} elseif ( $rc->mAttribs['rc_namespace'] == NS_SPECIAL ) {
+			} elseif ( $rc->getAttribute( 'rc_namespace' ) == NS_SPECIAL ) {
 				// Regular entries
 			} else {
 				$list->insertArticleLink( $changeLine, $rc, false, false );
@@ -121,7 +121,7 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 				if ( $wgSimpleChangesShowUser ) {
 					# from ChangesList::insertUserRelatedLinks()
 					$user = ' (' .
-						Linker::userLink( $rc->mAttribs['rc_user'], $rc->mAttribs['rc_user_text'] ) . ')';
+						Linker::userLink( $rc->getAttribute( 'rc_user' ), $rc->getAttribute( 'rc_user_text' ) ) . ')';
 					$changeLine .= Html::rawElement( 'span', array( 'class' => 'simplechanges-user' ), $user );
 				}
 				$changeLine .= Html::closeElement( 'li' ) . "\n";
