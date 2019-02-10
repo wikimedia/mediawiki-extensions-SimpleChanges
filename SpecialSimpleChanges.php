@@ -114,7 +114,7 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 			} elseif ( $rc->getAttribute( 'rc_namespace' ) == NS_SPECIAL ) {
 				// Regular entries
 			} else {
-				$list->insertArticleLink( $changeLine, $rc, false, false );
+				$changeLine .= $list->getArticleLink( $rc, false, false );
 				$changeLine = Html::openElement( 'li' ) . $changeLine;
 
 				global $wgSimpleChangesShowUser;
