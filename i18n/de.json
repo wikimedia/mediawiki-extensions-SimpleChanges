@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kghbln",
 			"Metalhead64"
 		]
 	},
 	"simplechanges": "Einfache Änderungen",
-	"simplechanges-desc": "Ergänzt eine Spezialseite, die eine vereinfachte Liste der „Letzten Änderungen“ anzeigt",
+	"simplechanges-desc": "Erweitert das Wiki um eine Spezialseite, die eine vereinfachte Liste letzter Änderungen anzeigt",
 	"simplechanges-summary": "Vereinfachte Anzeige der „Letzten Änderungen“.",
 	"simplechanges-contentnamespace": "Inhaltsnamensraum:"
 }
