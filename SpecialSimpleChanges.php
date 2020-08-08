@@ -1,8 +1,9 @@
 <?php
 
 class SpecialSimpleChanges extends SpecialRecentChanges {
-	public function __construct( $name = 'SimpleChanges' ) {
-		parent::__construct( $name );
+	public function __construct() {
+		parent::__construct();
+		$this->mName = 'SimpleChanges';
 	}
 
 	/**
