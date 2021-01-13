@@ -13,12 +13,16 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 	 * @global bool $wgSimpleChangesOnlyContentNamespaces
 	 * @global bool $wgSimpleChangesOnlyLatest
 	 *
-	 * @inheritdoc
+	 * @inheritDoc
 	 */
-	protected function runMainQueryHook( &$tables, &$fields, &$conds, &$query_options, &$join_conds,
+	protected function runMainQueryHook(
+		&$tables,
+		&$fields,
+		&$conds,
+		&$query_options,
+		&$join_conds,
 		$opts
 	) {
-
 		global $wgContentNamespaces, $wgSimpleChangesOnlyContentNamespaces, $wgSimpleChangesOnlyLatest;
 
 		# don't count log entries toward limit of number of changes displayed
@@ -42,7 +46,7 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 			if ( !in_array( 'page', $tables ) ) {
 				$tables[] = 'page';
 				$fields[] = 'page_latest';
-				$join_conds['page'] = array( 'LEFT JOIN', 'rc_cur_id=page_id' );
+				$join_conds['page'] = [ 'LEFT JOIN', 'rc_cur_id=page_id' ];
 			}
 		}
 
@@ -63,24 +67,24 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 		}
 		$nonContentNamespaces = array_diff( MWNamespace::getValidNamespaces(),
 			MWNamespace::getContentNamespaces() );
-		//Borrowed from parent class.
-		//If $wgSimpleChangesOnlyContentNamespaces is true, we need to change the namespace
-		//selector to only show content namespaces.
+		// Borrowed from parent class.
+		// If $wgSimpleChangesOnlyContentNamespaces is true, we need to change the namespace
+		// selector to only show content namespaces.
 		$nsSelect = Html::namespaceSelector(
-				array( 'selected' => $opts['namespace'], 'all' => '', 'exclude' => $nonContentNamespaces ),
-				array( 'name' => 'namespace', 'id' => 'namespace' )
+				[ 'selected' => $opts['namespace'], 'all' => '', 'exclude' => $nonContentNamespaces ],
+				[ 'name' => 'namespace', 'id' => 'namespace' ]
 		);
 		$nsLabel = Xml::label( $this->msg( 'simplechanges-contentnamespace' )->text(), 'namespace' );
 		$invert = Xml::checkLabel(
 				$this->msg( 'invert' )->text(), 'invert', 'nsinvert', $opts['invert'],
-				array( 'title' => $this->msg( 'tooltip-invert' )->text() )
+				[ 'title' => $this->msg( 'tooltip-invert' )->text() ]
 		);
 		$associated = Xml::checkLabel(
 				$this->msg( 'namespace_association' )->text(), 'associated', 'nsassociated',
-				$opts['associated'], array( 'title' => $this->msg( 'tooltip-namespace_association' )->text() )
+				$opts['associated'], [ 'title' => $this->msg( 'tooltip-namespace_association' )->text() ]
 		);
 
-		return array( $nsLabel, "$nsSelect $invert $associated" );
+		return [ $nsLabel, "$nsSelect $invert $associated" ];
 	}
 
 	/**
@@ -89,8 +93,8 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 	 * ChangesList::recentChangesLine()
 	 *
 	 * @global bool $wgSimpleChangesShowUser
-	 * @param $rows Array of database rows
-	 * @param $opts FormOptions
+	 * @param array $rows Array of database rows
+	 * @param FormOptions $opts
 	 */
 	public function outputChangesList( $rows, $opts ) {
 		$limit = $opts['limit'];
@@ -123,7 +127,7 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 					# from ChangesList::insertUserRelatedLinks()
 					$user = ' (' .
 						Linker::userLink( $rc->getAttribute( 'rc_user' ), $rc->getAttribute( 'rc_user_text' ) ) . ')';
-					$changeLine .= Html::rawElement( 'span', array( 'class' => 'simplechanges-user' ), $user );
+					$changeLine .= Html::rawElement( 'span', [ 'class' => 'simplechanges-user' ], $user );
 				}
 				$changeLine .= Html::closeElement( 'li' ) . "\n";
 			}
