@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Ата"
 		]
 	},
 	"simplechanges": "SimpleChanges",
-	"simplechanges-desc": "Спеціальна сторінка, яка відображає вижимки з Недавніх редагувань",
-	"simplechanges-summary": "Просте відображення недавніх змін.",
+	"simplechanges-desc": "Спеціальна сторінка, на якій відображається список останніх змін barebones",
+	"simplechanges-summary": "Просте відображення останніх змін.",
 	"simplechanges-contentnamespace": "Простір назв вмісту:"
 }
