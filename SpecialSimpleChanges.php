@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class SpecialSimpleChanges extends SpecialRecentChanges {
 	public function __construct() {
 		parent::__construct();
@@ -65,8 +67,9 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 		if ( !$wgSimpleChangesOnlyContentNamespaces ) {
 			return parent::namespaceFilterForm( $opts );
 		}
-		$nonContentNamespaces = array_diff( MWNamespace::getValidNamespaces(),
-			MWNamespace::getContentNamespaces() );
+		$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
+		$nonContentNamespaces = array_diff( $namespaceInfo->getValidNamespaces(),
+			$namespaceInfo->getContentNamespaces() );
 		// Borrowed from parent class.
 		// If $wgSimpleChangesOnlyContentNamespaces is true, we need to change the namespace
 		// selector to only show content namespaces.
