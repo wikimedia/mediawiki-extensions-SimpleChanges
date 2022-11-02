@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"McDutchie",
+			"Verdy p"
 		]
 	},
 	"simplechanges": "Modifications simples",
-	"simplechanges-desc": "Page spéciale qui affiche une liste des modifications récentes de barebones",
+	"simplechanges-desc": "Page spéciale qui affiche une liste simplifiée des modifications récentes",
 	"simplechanges-summary": "Affichage simple des modifications récentes.",
-	"simplechanges-contentnamespace": "Espace de noms du contenu :"
+	"simplechanges-contentnamespace": "Espace de noms du contenu :"
 }
