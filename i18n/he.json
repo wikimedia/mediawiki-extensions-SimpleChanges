@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Ronel1"
 		]
 	},
-	"simplechanges": "SimpleChanges",
-	"simplechanges-desc": "דף מיוחד, המציג רשימת השינויים האחרונים barebones",
-	"simplechanges-summary": "התצוגה הפשוט של השינויים האחרונים.",
-	"simplechanges-contentnamespace": "תוכן טווח שמות:"
+	"simplechanges": "שינויים פשוטים",
+	"simplechanges-desc": "דף מיוחד שמציג רשימת שינויים אחרונים פשוטה ביותר",
+	"simplechanges-summary": "התצוגה הפשוטה של השינויים האחרונים.",
+	"simplechanges-contentnamespace": "מרחב שם של תוכן:"
 }
