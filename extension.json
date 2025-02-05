@@ -37,6 +37,10 @@
 		"SimpleChangesShowUser": {
 			"value": false,
 			"description": "Show the user who made the change."
+		},
+		"SimpleChangesMaxCacheTime": {
+			"value": -1,
+			"description": "Maximum seconds to cache when transcluded. Use -1 for MediaWiki default (5 min in miser mode, 0 otherwise)."
 		}
 	},
 	"manifest_version": 2
