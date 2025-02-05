@@ -159,4 +159,10 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 		$rclistOutput .= $list->endRecentChangesList();
 		$this->getOutput()->addHTML( $rclistOutput );
 	}
+
+	/** @inheritDoc */
+	public function maxIncludeCacheTime() {
+		global $wgSimpleChangesMaxCacheTime;
+		return $wgSimpleChangesMaxCacheTime === -1 ? parent::maxIncludeCacheTime() : (int)$wgSimpleChangesMaxCacheTime;
+	}
 }
