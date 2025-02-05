@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"Joseph"
 		]
 	},
 	"simplechanges": "Basit değişiklikler",
-	"simplechanges-desc": "Son değişiklikler listesinde bir barbar görüntüleyen özel sayfa",
+	"simplechanges-desc": "Temel hatlarıyla son değişiklikler listesi görüntüleyen özel sayfa",
 	"simplechanges-summary": "Son değişikliklerin basit görüntüsü.",
 	"simplechanges-contentnamespace": "İçerik ad alanı:"
 }
