@@ -1,6 +1,12 @@
 <?php
 
+use MediaWiki\Html\FormOptions;
+use MediaWiki\Html\Html;
+use MediaWiki\Linker\Linker;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\RecentChanges\ChangesList;
+use MediaWiki\RecentChanges\RecentChange;
+use MediaWiki\Xml\Xml;
 
 class SpecialSimpleChanges extends SpecialRecentChanges {
 	public function __construct() {
@@ -128,9 +134,10 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 				global $wgSimpleChangesShowUser;
 				if ( $wgSimpleChangesShowUser ) {
 					# from ChangesList::insertUserRelatedLinks()
-					$user = ' (' .
-						Linker::userLink( $rc->getAttribute( 'rc_user' ), $rc->getAttribute( 'rc_user_text' ) ) . ')';
-					$changeLine .= Html::rawElement( 'span', [ 'class' => 'simplechanges-user' ], $user );
+					$user = $rc->getPerformerIdentity();
+					$userHtml = ' (' .
+						Linker::userLink( $user->getId(), $user->getName() ) . ')';
+					$changeLine .= Html::rawElement( 'span', [ 'class' => 'simplechanges-user' ], $userHtml );
 				}
 				$changeLine .= Html::closeElement( 'li' ) . "\n";
 			}
