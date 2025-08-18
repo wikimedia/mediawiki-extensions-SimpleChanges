@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"JeffreyKim",
+			"Ktchankt",
+			"Yueman"
+		]
+	},
+	"simplechanges": "簡單嘅改動",
+	"simplechanges-desc": "顯示基本嘅最近改動清單嘅專門版",
+	"simplechanges-summary": "簡單噉顯示最近嘅改動。",
+	"simplechanges-contentnamespace": "內容名空間："
+}
