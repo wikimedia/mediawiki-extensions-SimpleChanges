@@ -34,7 +34,7 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 		global $wgContentNamespaces, $wgSimpleChangesOnlyContentNamespaces, $wgSimpleChangesOnlyLatest;
 
 		# don't count log entries toward limit of number of changes displayed
-		$conds[] = 'rc_type != ' . RC_LOG;
+		$conds[] = $this->getDB()->expr( 'rc_source', '!=', RecentChange::SRC_LOG );
 
 		if ( $opts['namespace'] == '' && $wgSimpleChangesOnlyContentNamespaces &&
 			$wgContentNamespaces != null ) {
