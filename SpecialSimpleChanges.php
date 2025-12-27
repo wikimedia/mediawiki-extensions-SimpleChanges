@@ -84,13 +84,22 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 				[ 'name' => 'namespace', 'id' => 'namespace' ]
 		);
 		$nsLabel = Xml::label( $this->msg( 'simplechanges-contentnamespace' )->text(), 'namespace' );
-		$invert = Xml::checkLabel(
-				$this->msg( 'invert' )->text(), 'invert', 'nsinvert', $opts['invert'],
-				[ 'title' => $this->msg( 'tooltip-invert' )->text() ]
+		$invert = Html::check(
+			'invert', $opts['invert'],
+			[ 'id' => 'nsinvert', 'title' => $this->msg( 'tooltip-invert' )->text() ]
+		) . "\u{00A0}" . Html::label(
+			$this->msg( 'invert' )->text(),
+			'nsinvert',
+			[ 'title' => $this->msg( 'tooltip-invert' )->text() ]
 		);
-		$associated = Xml::checkLabel(
-				$this->msg( 'namespace_association' )->text(), 'associated', 'nsassociated',
-				$opts['associated'], [ 'title' => $this->msg( 'tooltip-namespace_association' )->text() ]
+		$associated = Html::check(
+			'associated',
+			$opts['associated'],
+			[ 'id' => 'nsassociated', 'title' => $this->msg( 'tooltip-namespace_association' )->text() ]
+		) . "\u{00A0}" . Html::label(
+			$this->msg( 'namespace_association' )->text(),
+			'nsassociated',
+			[ 'title' => $this->msg( 'tooltip-namespace_association' )->text() ]
 		);
 
 		return [ $nsLabel, "$nsSelect $invert $associated" ];
