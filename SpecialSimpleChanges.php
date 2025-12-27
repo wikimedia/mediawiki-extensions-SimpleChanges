@@ -6,7 +6,6 @@ use MediaWiki\Linker\Linker;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\RecentChanges\ChangesList;
 use MediaWiki\RecentChanges\RecentChange;
-use MediaWiki\Xml\Xml;
 
 class SpecialSimpleChanges extends SpecialRecentChanges {
 	public function __construct() {
@@ -83,7 +82,7 @@ class SpecialSimpleChanges extends SpecialRecentChanges {
 				[ 'selected' => $opts['namespace'], 'all' => '', 'exclude' => $nonContentNamespaces ],
 				[ 'name' => 'namespace', 'id' => 'namespace' ]
 		);
-		$nsLabel = Xml::label( $this->msg( 'simplechanges-contentnamespace' )->text(), 'namespace' );
+		$nsLabel = Html::label( $this->msg( 'simplechanges-contentnamespace' )->text(), 'namespace' );
 		$invert = Html::check(
 			'invert', $opts['invert'],
 			[ 'id' => 'nsinvert', 'title' => $this->msg( 'tooltip-invert' )->text() ]
