@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Revi",
+			"Tensama0415",
 			"아라"
 		]
 	},
 	"simplechanges": "간단한 바뀜",
+	"simplechanges-desc": "최근 변경 사항 목록을 간략하게 보여주는 특수 문서입니다",
 	"simplechanges-summary": "최근 바뀜의 간단한 표시입니다.",
 	"simplechanges-contentnamespace": "콘텐츠 이름공간:"
 }
