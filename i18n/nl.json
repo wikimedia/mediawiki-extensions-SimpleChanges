@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"Rangekill"
+			"Rangekill",
+			"Siebrand"
 		]
 	},
 	"simplechanges": "Eenvoudige wijzigingen",
-	"simplechanges-desc": "Special pagina die een versimpelde lijst van recente wijzigingen toont",
+	"simplechanges-desc": "Special pagina die een versimpelde lijst van recente wijzigingen weergeeft",
 	"simplechanges-summary": "Eenvoudige weergave van recente wijzigingen.",
 	"simplechanges-contentnamespace": "Inhoudnaamruimte:"
 }
