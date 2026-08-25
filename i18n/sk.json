@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"simplechanges": "Jednoduché zmeny",
+	"simplechanges-desc": "Špeciálna stránka zobrazujúca zjednodušený zoznam posledných úprav",
+	"simplechanges-summary": "Jednoduché zobrazenie posledných úprav.",
+	"simplechanges-contentnamespace": "Obsahový menný priestor:"
+}
